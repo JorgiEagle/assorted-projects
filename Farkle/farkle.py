@@ -30,7 +30,7 @@ def remove_from_list(roll, value):
 test = 2
 with open('game_results_full_game' + str(test) + '.txt', 'w') as results_file:
     running_score = []
-    number_of_games = 10000
+    number_of_games = 100
     results_file.write('Strategy: Take straights and three pair, all 3 of a kind or higher, one one and only then one 5, quit under 3 dice')
     # farkle_total = 0
     # play the given number of games

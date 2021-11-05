@@ -1,32 +1,7 @@
 # program to calculate probabilities of FARKLE games and outcomes and optimise strategy
-# print('For ' + str(number_of_games*10) + ' rolls, ' + str(farkle_total) + ' farkles occurred, ' + str(round(((farkle_total*10)/number_of_games), 2)) + '%')
+# print('For ' + str(number_of_games*10) + ' rolls,' + str(farkle_total) + ' farkles occurred, ' + str(round(((farkle_total*10)/number_of_games), 2)) + '%')
+import farkle_functions as ff
 import random
-
-
-def three_pairs_bool(dice_list) -> bool:
-    occurrences = [dice_list.count(x) for x in range(1, 7)]
-    return occurrences.count(2) == 3
-
-
-def straight_bool(dice_list) -> bool:
-    occurrences = [dice_list.count(x) for x in range(1, 7)]
-    return occurrences.count(1) == 6
-
-
-def farkled(dice_list) -> bool:
-    counts = {x: dice_list.count(x) for x in range(1, 7)}
-    three_occurrences = [1 for x in counts.keys() if counts[x] >= 3]
-    return counts[1] == 0 and counts[5] == 0 and not three_pairs_bool(dice_list) and not straight_bool(dice_list) and not three_occurrences
-
-
-def remove_multiple_from_list(the_list, value):
-    return [x for x in the_list if x != value]
-
-
-def remove_from_list(roll, value):
-    roll.remove(value)
-    results_file.write('\n\t\tRemoved: ' + str(value))
-    return roll, 100 if value == 1 else 50
 test = 2
 with open('game_results_full_game' + str(test) + '.txt', 'w') as results_file:
     running_score = []
@@ -50,18 +25,18 @@ with open('game_results_full_game' + str(test) + '.txt', 'w') as results_file:
                 roll = [random.randint(1, 6) for x in range(dice_left)]
                 # if farkled, set to true and exit loop, giving a score of zero
                 results_file.write('\n\t\tRoll: ' + str(roll))
-                if farkled(roll):
+                if ff.farkled(roll):
                     results_file.write('\n\t\tFARKLED')
                     round_score = 0
                     break
                 # straight achieved
-                if straight_bool(roll):
+                if ff.straight_bool(roll):
                     round_score += 1500
                     results_file.write('\n\t\tSTRAIGHT')
                     # new roll
                     continue
                 # three two paris achieved
-                if three_pairs_bool(roll):
+                if ff.three_pairs_bool(roll):
                     results_file.write('\n\t\tThree Pair')
                     round_score += 750
                     # new roll
@@ -72,24 +47,24 @@ with open('game_results_full_game' + str(test) + '.txt', 'w') as results_file:
                     results_file.write('\n\t\tThree of a kind: ' + str(three_or_more))
                 for dice_value in three_or_more.keys():
                     round_score += dice_value*(1000 if dice_value == 1 else 100)*(three_or_more[dice_value]-2)
-                    roll = remove_multiple_from_list(roll, dice_value)
+                    roll = ff.remove_multiple_from_list(roll, dice_value)
 
                 if 1 in roll:
                     if len(roll) <= 3:
                         while 1 in roll:
-                            roll, to_add = remove_from_list(roll, 1)
+                            roll, to_add = ff.remove_from_list(roll, 1)
                             round_score += to_add
                     else:
-                        roll, to_add = remove_from_list(roll, 1)
+                        roll, to_add = ff.remove_from_list(roll, 1)
                         round_score += to_add
                     # roll again
                 elif 5 in roll:
                     if len(roll) <=3:
                         while 5 in roll:
-                            roll, to_add = remove_from_list(roll, 5)
+                            roll, to_add = ff.remove_from_list(roll, 5)
                             round_score += to_add
                     else:
-                        roll, to_add = remove_from_list(roll, 5)
+                        roll, to_add = ff.remove_from_list(roll, 5)
                         round_score += to_add
 
                 dice_left = len(roll)

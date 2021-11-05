@@ -4,11 +4,11 @@ import random
 
 
 def three_pairs_bool(dice_list) -> bool:
-    return dice.count(2) == 3
+    return dice_list.count(2) == 3
 
 
 def straight_bool(dice_list) -> bool:
-    return dice.count(1) == 6
+    return dice_list.count(1) == 6
 
 
 def farkled(dice_list) -> bool:

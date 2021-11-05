@@ -66,7 +66,7 @@ with open('game_results_full_game' + str(test) + '.txt', 'w') as results_file:
                 if three_or_more:
                     results_file.write('\n\t\tThree of a kind: ' + str(three_or_more))
                 for dice_value in three_or_more.keys():
-                    round_score += dice_value*100*(three_or_more[dice_value]-2)
+                    round_score += dice_value*(1000 if dice_value == 1 else 100)*(three_or_more[dice_value]-2)
                     roll = remove_from_list(roll, dice_value)
 
                 if 1 in roll:

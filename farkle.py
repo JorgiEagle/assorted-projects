@@ -4,11 +4,13 @@ import random
 
 
 def three_pairs_bool(dice_list) -> bool:
-    return dice_list.count(2) == 3
+    occurrences = [dice_list.count(x) for x in range(1, 7)]
+    return occurrences.count(2) == 3
 
 
 def straight_bool(dice_list) -> bool:
-    return dice_list.count(1) == 6
+    occurrences = [dice_list.count(x) for x in range(1, 7)]
+    return occurrences.count(1) == 6
 
 
 def farkled(dice_list) -> bool:
@@ -25,7 +27,7 @@ dice = [1, 2, 3, 4, 5, 6]
 test = 1
 with open('game_results_full_game' + str(test) + '.txt', 'w') as results_file:
     running_score = 0
-    number_of_games = 10
+    number_of_games = 100
     results_file.write('Strategy: Take straights and three pair, all 3 of a kind or higher, one one and only then one 5, quit under 3 dice')
     # farkle_total = 0
     # play the given number of games

@@ -2,11 +2,11 @@
 # print('For ' + str(number_of_games*10) + ' rolls,' + str(farkle_total) + ' farkles occurred, ' + str(round(((farkle_total*10)/number_of_games), 2)) + '%')
 import farkle_functions as ff
 import random
-test = 2
-with open('game_results_full_game' + str(test) + '.txt', 'w') as results_file:
+test = 'test'
+with open('game_results_game_' + str(test) + '.txt', 'w') as results_file:
     running_score = []
-    number_of_games = 100
-    results_file.write('Strategy: Take straights and three pair, all 3 of a kind or higher, one one and only then one 5, quit under 3 dice')
+    number_of_games = 1
+    results_file.write('Strategy: Take straights and three pair, all 3 of a kind and all ones and fives, one one and only then one 5, quit under 3 dice')
     # farkle_total = 0
     # play the given number of games
     for games in range(number_of_games):

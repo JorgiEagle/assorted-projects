@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 from collections import defaultdict
 import requests
 import re
-
+import csv
 '''
 Returns a dictionary, for which the first element is is the value as an int and the second is the key, 
 the given list normally has two elements, material and number needed, in the case of there being one, then the number
@@ -10,6 +10,43 @@ needed is infered to be one
 :param list of materials and number needed
 returns dictionary
 '''
+
+
+def write_material_to_file(write_file_, material_, artefact_, individual_amount_, amount_needed_, materials_needed_):
+    write_file_.write('Material: ' + material_ + '\nArtefact: ' + artefact_ + '\nIndividual amount: ' + str(individual_amount_) + '\nAmount needed: ' + str(amount_needed_) + '\nTotal: ' + str(individual_amount_*amount_needed_))
+    write_file_.write('\n\n' + str(materials_needed_) + '\n\n\n')
+
+
+def write_main_output_to_file(write_file_output, artefact_materials_output, all_artefacts_output, materials_needed_output):
+    write_file_output.write('Artefact Materials\n\n')
+    separator = '\t'
+    for key, value in artefact_materials_output.items():
+        write_file_output.write(key + '\n')
+        for mat_dic in value:
+            for material, amount in mat_dic.items():
+                write_file_output.write((separator + material + separator + str(amount) + '\n'))
+    write_file_output.write('\nAll Artefacts\n\n')
+    for key, value in all_artefacts_output.items():
+        write_file_output.write(key + separator + str(value) + '\n')
+    write_file_output.write('\nMaterials Needed\n\n')
+    for key, value in materials_needed_output.items():
+        write_file_output.write(key + separator + str(value) + '\n')
+
+
+def write_main_output_to_file_csv(write_file_output, artefact_materials_output, all_artefacts_output, materials_needed_output):
+    separator = ','
+    csv_writer = csv.writer(write_file_output, delimiter=separator)
+    csv_writer.writerow(['Artefact Materials'])
+    for key, value in artefact_materials_output.items():
+        csv_writer.writerow([key])
+        for mat_dic in value:
+            [csv_writer.writerow(['',material, amount]) for material, amount in mat_dic.items()]
+    csv_writer.writerow(['All Artefacts'])
+    [csv_writer.writerow([key, value]) for key, value in all_artefacts_output.items()]
+    csv_writer.writerow(['Materials Needed'])
+    [csv_writer.writerow([key, value]) for key, value in materials_needed_output.items()]
+
+
 def dict_from_list(given_list):
     try:
         return {given_list[1]: int(given_list[0])}
@@ -80,13 +117,16 @@ for artefact, amount_needed in all_artefacts.items():
         for material, individual_amount in material_dict.items():
             materials_needed[material] += individual_amount*amount_needed
 
-with open('runescape.txt', 'w') as write_file:
-    write_file.write('Artefact Materials\n\n')
-    for key, value in artefact_materials.items():
-        write_file.write(key + ' ' + str(value) + '\n')
-    write_file.write('\n All Artefacts\n\n')
-    for key, value in all_artefacts.items():
-        write_file.write(key + ' ' + str(value) + '\n')
-    write_file.write('\n Materials Needed\n\n')
-    for key, value in materials_needed.items():
-        write_file.write(key + ' ' + str(value) + '\n')
+
+if input('Write as a CSV file? (Y/N)').upper() == 'Y':
+    file_format = 'csv'
+    csv_file_ = True
+else:
+    file_format = 'txt'
+    csv_file_ = False
+
+with open('runescape_arch_materials.' + file_format, 'w', newline='') as write_file:
+    if csv_file_:
+        write_main_output_to_file_csv(write_file, artefact_materials, all_artefacts, materials_needed)
+    else:
+        write_main_output_to_file(write_file, artefact_materials, all_artefacts, materials_needed)

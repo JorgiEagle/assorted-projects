@@ -74,6 +74,13 @@ def extract_number_needed(given_table):
     pass
 
 
+def give_keys(list_of_dictionaries):
+    list_of_keys = []
+    for dictionary_ in list_of_dictionaries:
+        list_of_keys.extend(dictionary_.keys())
+    return list_of_keys
+
+
 url = 'https://runescape.wiki/w/Artefact'
 
 page = requests.get(url)
@@ -130,3 +137,11 @@ with open('runescape_arch_materials.' + file_format, 'w', newline='') as write_f
         write_main_output_to_file_csv(write_file, artefact_materials, all_artefacts, materials_needed)
     else:
         write_main_output_to_file(write_file, artefact_materials, all_artefacts, materials_needed)
+
+with open('runescape_arch_material_artefacts.csv', 'w', newline='') as mat_art:
+    output = csv.writer(mat_art, delimiter=',')
+    for ind_material in materials_needed.keys():
+        material_artefacts = [artefact_key for artefact_key, value in artefact_materials.items() if ind_material in give_keys(value)]
+        output.writerow([ind_material, len(material_artefacts)])
+        for item in material_artefacts:
+            output.writerow(['', item])

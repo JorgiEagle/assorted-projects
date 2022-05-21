@@ -9,3 +9,5 @@ for test in range(int(input())):
     Best_min_Sum = {}
     for i in range(capacity_K):
         Best_min_Sum[i] = float('inf')
+        print
+

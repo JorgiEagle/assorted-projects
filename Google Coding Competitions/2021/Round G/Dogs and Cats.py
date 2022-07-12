@@ -2,7 +2,7 @@ for test in range(int(input())):
     number_of_animals, dog_portions, cat_portions, extra_portions = map(int, input().split())
     portions = {'D': dog_portions, 'C': cat_portions}
     animal_string = input()
-    start_time = time.time()
+
     case = 'Case #' + str(test+1) + ':'
     # if there are an insufficient number of dog portions
     if animal_string.count('D') > dog_portions:
@@ -22,3 +22,4 @@ for test in range(int(input())):
             break
     else:
         print(case, 'YES')
+        print(time)

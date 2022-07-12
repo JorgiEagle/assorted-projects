@@ -1,0 +1,24 @@
+Dice count: 6
+Total Possible Rolls: 46656
+Rolls which farkle: 1080
+Farkle Probability: 2.31%
+Dice count: 5
+Total Possible Rolls: 7776
+Rolls which farkle: 600
+Farkle Probability: 7.72%
+Dice count: 4
+Total Possible Rolls: 1296
+Rolls which farkle: 204
+Farkle Probability: 15.74%
+Dice count: 3
+Total Possible Rolls: 216
+Rolls which farkle: 60
+Farkle Probability: 27.78%
+Dice count: 2
+Total Possible Rolls: 36
+Rolls which farkle: 16
+Farkle Probability: 44.44%
+Dice count: 1
+Total Possible Rolls: 6
+Rolls which farkle: 4
+Farkle Probability: 66.67%

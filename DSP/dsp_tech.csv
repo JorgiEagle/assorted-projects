@@ -1,0 +1,110 @@
+,Tech,Inputs,Inputs.1,Inputs.2,Inputs.3
+0,Dyson Sphere Program,,,,
+1,Electromagnetism,10xMagnetic Coil,10xMagnetic Coil,10xMagnetic Coil,10xMagnetic Coil
+2,Basic Logistics System,10xCircuit Board,10xCircuit Board,10xGear,10xGear
+3,Automatic Metallurgy,10xMagnetic Coil,10xMagnetic Coil,10xCircuit Board,10xCircuit Board
+4,Electromagnetic Matrix,10xMagnetic Coil,10xMagnetic Coil,10xCircuit Board,10xCircuit Board
+5,Basic Assembling Processes,10xCircuit Board,10xCircuit Board,10xGear,10xGear
+6,Fluid Storage Encapsulation,50xElectromagnetic Matrix,50xElectromagnetic Matrix,50xElectromagnetic Matrix,50xElectromagnetic Matrix
+7,High-Efficiency Plasma Control,50xElectromagnetic Matrix,50xElectromagnetic Matrix,50xElectromagnetic Matrix,50xElectromagnetic Matrix
+8,Electromagnetic Drive,50xElectromagnetic Matrix,50xElectromagnetic Matrix,50xElectromagnetic Matrix,50xElectromagnetic Matrix
+9,Steel Smelting,120xElectromagnetic Matrix,120xElectromagnetic Matrix,120xElectromagnetic Matrix,120xElectromagnetic Matrix
+10,Smelting Purification,100xElectromagnetic Matrix,100xElectromagnetic Matrix,100xElectromagnetic Matrix,100xElectromagnetic Matrix
+11,Semiconductor Material,200xElectromagnetic Matrix,200xElectromagnetic Matrix,200xElectromagnetic Matrix,200xElectromagnetic Matrix
+12,Thermal Power,30xElectromagnetic Matrix,30xElectromagnetic Matrix,30xElectromagnetic Matrix,30xElectromagnetic Matrix
+13,Plasma Extract Refining,100xElectromagnetic Matrix,100xElectromagnetic Matrix,100xElectromagnetic Matrix,100xElectromagnetic Matrix
+14,Improved Logistics System,100xElectromagnetic Matrix,100xElectromagnetic Matrix,100xElectromagnetic Matrix,100xElectromagnetic Matrix
+15,Environment Modification,400xElectromagnetic Matrix,400xElectromagnetic Matrix,400xElectromagnetic Matrix,400xElectromagnetic Matrix
+16,Crystal Smelting,500xElectromagnetic Matrix,500xElectromagnetic Matrix,500xEnergy Matrix,500xEnergy Matrix
+17,Solar Collection,200xElectromagnetic Matrix,200xElectromagnetic Matrix,200xElectromagnetic Matrix,200xElectromagnetic Matrix
+18,Proliferator Mk.I,200xElectromagnetic Matrix,200xElectromagnetic Matrix,200xElectromagnetic Matrix,200xElectromagnetic Matrix
+19,Deuterium Fractionation,200xElectromagnetic Matrix,200xElectromagnetic Matrix,300xEnergy Matrix,300xEnergy Matrix
+20,Basic Chemical Engineering,200xElectromagnetic Matrix,200xElectromagnetic Matrix,200xElectromagnetic Matrix,200xElectromagnetic Matrix
+21,Energy Matrix,200xElectromagnetic Matrix,200xElectromagnetic Matrix,200xElectromagnetic Matrix,200xElectromagnetic Matrix
+22,Magnetic Levitation Technology,400xElectromagnetic Matrix,400xElectromagnetic Matrix,100xEnergy Matrix,100xEnergy Matrix
+23,High-Efficiency Logistics System,400xElectromagnetic Matrix,400xElectromagnetic Matrix,100xEnergy Matrix,100xEnergy Matrix
+24,Distribution Logistics System,600xElectromagnetic Matrix,600xElectromagnetic Matrix,300xEnergy Matrix,300xEnergy Matrix
+25,Titanium Smelting,200xElectromagnetic Matrix,200xElectromagnetic Matrix,200xEnergy Matrix,200xEnergy Matrix
+26,Energy Storage,600xElectromagnetic Matrix,600xElectromagnetic Matrix,600xEnergy Matrix,600xEnergy Matrix
+27,Photon Frequency Conversion,200xElectromagnetic Matrix,200xElectromagnetic Matrix,200xEnergy Matrix,200xEnergy Matrix
+28,Processor,800xElectromagnetic Matrix,800xElectromagnetic Matrix,800xElectromagnetic Matrix,800xElectromagnetic Matrix
+29,Applied Superconductor,400xElectromagnetic Matrix,400xElectromagnetic Matrix,400xElectromagnetic Matrix,400xElectromagnetic Matrix
+30,Polymer Chemical Engineering,400xElectromagnetic Matrix,400xElectromagnetic Matrix,400xEnergy Matrix,400xEnergy Matrix
+31,X-Ray Cracking,400xElectromagnetic Matrix,400xElectromagnetic Matrix,400xEnergy Matrix,400xEnergy Matrix
+32,Hydrogen Fuel Rod,400xEnergy Matrix,400xEnergy Matrix,400xEnergy Matrix,400xEnergy Matrix
+33,Super Magnetic Field Generator,1000xElectromagnetic Matrix,1000xElectromagnetic Matrix,250xEnergy Matrix,250xEnergy Matrix
+34,Planetary Logistics System,800xElectromagnetic Matrix,800xElectromagnetic Matrix,400xEnergy Matrix,400xEnergy Matrix
+35,Geothermal Extraction,800xElectromagnetic Matrix,800xElectromagnetic Matrix,800xEnergy Matrix,800xEnergy Matrix
+36,Solar Sail Orbit System,300xElectromagnetic Matrix,300xElectromagnetic Matrix,300xEnergy Matrix,300xEnergy Matrix
+37,High-Speed Assembling Processes,600xElectromagnetic Matrix,600xElectromagnetic Matrix,300xEnergy Matrix,300xEnergy Matrix
+38,Proliferator Mk.II,800xElectromagnetic Matrix,800xElectromagnetic Matrix,600xEnergy Matrix,600xEnergy Matrix
+39,High-Strength Crystal,600xElectromagnetic Matrix,600xElectromagnetic Matrix,600xEnergy Matrix,600xEnergy Matrix
+40,Reforming Refine,500xElectromagnetic Matrix,500xElectromagnetic Matrix,500xEnergy Matrix,500xEnergy Matrix
+41,Thruster,1000xEnergy Matrix,1000xEnergy Matrix,1000xEnergy Matrix,1000xEnergy Matrix
+42,Magnetic Particle Trap,1600xElectromagnetic Matrix,1600xElectromagnetic Matrix,800xEnergy Matrix,800xEnergy Matrix
+43,Integrated Logistics System,1000xElectromagnetic Matrix,1000xElectromagnetic Matrix,500xEnergy Matrix,500xEnergy Matrix
+44,Integrated Logistics System,50xStructure Matrix,50xStructure Matrix,50xStructure Matrix,50xStructure Matrix
+45,High-Strength Titanium Alloy,800xElectromagnetic Matrix,800xElectromagnetic Matrix,800xEnergy Matrix,800xEnergy Matrix
+46,High-Strength Titanium Alloy,80xStructure Matrix,80xStructure Matrix,80xStructure Matrix,80xStructure Matrix
+47,High-Strength Lightweight Structure,1200xElectromagnetic Matrix,1200xElectromagnetic Matrix,200xStructure Matrix,200xStructure Matrix
+48,Ray Receiver,600xElectromagnetic Matrix,600xElectromagnetic Matrix,600xEnergy Matrix,600xEnergy Matrix
+49,Mini Fusion Power Generation,1000xElectromagnetic Matrix,1000xElectromagnetic Matrix,500xEnergy Matrix,500xEnergy Matrix
+50,Mini Fusion Power Generation,250xStructure Matrix,250xStructure Matrix,250xStructure Matrix,250xStructure Matrix
+51,High-Strength Material,600xEnergy Matrix,600xEnergy Matrix,150xStructure Matrix,150xStructure Matrix
+52,Structure Matrix,800xElectromagnetic Matrix,800xElectromagnetic Matrix,800xEnergy Matrix,800xEnergy Matrix
+53,Reinforced Thruster,1600xEnergy Matrix,1600xEnergy Matrix,1600xEnergy Matrix,1600xEnergy Matrix
+54,Interstellar Logistics System,1200xElectromagnetic Matrix,1200xElectromagnetic Matrix,1200xEnergy Matrix,1200xEnergy Matrix
+55,Interstellar Logistics System,120xStructure Matrix,120xStructure Matrix,120xStructure Matrix,120xStructure Matrix
+56,Interstellar Power Transmission,1200xElectromagnetic Matrix,1200xElectromagnetic Matrix,1200xEnergy Matrix,1200xEnergy Matrix
+57,Interstellar Power Transmission,120xStructure Matrix,120xStructure Matrix,120xStructure Matrix,120xStructure Matrix
+58,Proliferator Mk.III,800xElectromagnetic Matrix,800xElectromagnetic Matrix,600xEnergy Matrix,600xEnergy Matrix
+59,Proliferator Mk.III,400xStructure Matrix,400xStructure Matrix,400xStructure Matrix,400xStructure Matrix
+60,Particle Control Technology,800xElectromagnetic Matrix,800xElectromagnetic Matrix,800xEnergy Matrix,800xEnergy Matrix
+61,Particle Control Technology,200xStructure Matrix,200xStructure Matrix,200xStructure Matrix,200xStructure Matrix
+62,High-Strength Glass,800xEnergy Matrix,800xEnergy Matrix,400xStructure Matrix,400xStructure Matrix
+63,Casimir Crystal,800xElectromagnetic Matrix,800xElectromagnetic Matrix,800xEnergy Matrix,800xEnergy Matrix
+64,Casimir Crystal,800xStructure Matrix,800xStructure Matrix,800xStructure Matrix,800xStructure Matrix
+65,Miniature Particle Collider,800xElectromagnetic Matrix,800xElectromagnetic Matrix,800xEnergy Matrix,800xEnergy Matrix
+66,Miniature Particle Collider,800xStructure Matrix,800xStructure Matrix,800xStructure Matrix,800xStructure Matrix
+67,Satellite Power Distribution System,800xElectromagnetic Matrix,800xElectromagnetic Matrix,800xEnergy Matrix,800xEnergy Matrix
+68,Satellite Power Distribution System,800xStructure Matrix,800xStructure Matrix,800xStructure Matrix,800xStructure Matrix
+69,Gas Giants Exploitation,1200xElectromagnetic Matrix,1200xElectromagnetic Matrix,1200xEnergy Matrix,1200xEnergy Matrix
+70,Gas Giants Exploitation,1200xStructure Matrix,1200xStructure Matrix,1200xStructure Matrix,1200xStructure Matrix
+71,Information Matrix,800xElectromagnetic Matrix,800xElectromagnetic Matrix,800xEnergy Matrix,800xEnergy Matrix
+72,Wave Function Interference,1200xElectromagnetic Matrix,1200xElectromagnetic Matrix,1200xEnergy Matrix,1200xEnergy Matrix
+73,Wave Function Interference,200xInformation Matrix,200xInformation Matrix,200xInformation Matrix,200xInformation Matrix
+74,Strange Matter,1000xElectromagnetic Matrix,1000xElectromagnetic Matrix,1000xEnergy Matrix,1000xEnergy Matrix
+75,Strange Matter,1000xStructure Matrix,1000xStructure Matrix,1000xStructure Matrix,1000xStructure Matrix
+76,Vertical Launching Silo,1600xElectromagnetic Matrix,1600xElectromagnetic Matrix,1600xEnergy Matrix,1600xEnergy Matrix
+77,Vertical Launching Silo,1600xStructure Matrix,1600xStructure Matrix,1600xInformation Matrix,1600xInformation Matrix
+78,Quantum Chip,800xElectromagnetic Matrix,800xElectromagnetic Matrix,800xEnergy Matrix,800xEnergy Matrix
+79,Quantum Chip,800xInformation Matrix,800xInformation Matrix,800xInformation Matrix,800xInformation Matrix
+80,Plane-Filter Smelting Technology,1000xElectromagnetic Matrix,1000xElectromagnetic Matrix,1000xEnergy Matrix,1000xEnergy Matrix
+81,Plane-Filter Smelting Technology,1000xStructure Matrix,1000xStructure Matrix,1000xInformation Matrix,1000xInformation Matrix
+82,Gravitational Wave Refraction,1200xElectromagnetic Matrix,1200xElectromagnetic Matrix,1200xEnergy Matrix,1200xEnergy Matrix
+83,Gravitational Wave Refraction,1200xStructure Matrix,1200xStructure Matrix,1200xStructure Matrix,1200xStructure Matrix
+84,Dyson Sphere Stress System (Lv1),2000xElectromagnetic Matrix,2000xElectromagnetic Matrix,2000xEnergy Matrix,2000xEnergy Matrix
+85,Dyson Sphere Stress System (Lv1),2000xStructure Matrix,2000xStructure Matrix,2000xInformation Matrix,2000xInformation Matrix
+86,Dyson Sphere Stress System (Lv1),2000xGravity Matrix,2000xGravity Matrix,2000xGravity Matrix,2000xGravity Matrix
+87,Planetary Ionosphere Utilization,2000xElectromagnetic Matrix,2000xElectromagnetic Matrix,2000xEnergy Matrix,2000xEnergy Matrix
+88,Planetary Ionosphere Utilization,2000xStructure Matrix,2000xStructure Matrix,2000xGravity Matrix,2000xGravity Matrix
+89,Quantum Printing Technology,800xElectromagnetic Matrix,800xElectromagnetic Matrix,800xEnergy Matrix,800xEnergy Matrix
+90,Quantum Printing Technology,800xStructure Matrix,800xStructure Matrix,800xInformation Matrix,800xInformation Matrix
+91,Photon Spotlight Mining Technology,1000xElectromagnetic Matrix,1000xElectromagnetic Matrix,1000xEnergy Matrix,1000xEnergy Matrix
+92,Photon Spotlight Mining Technology,1000xStructure Matrix,1000xStructure Matrix,1000xInformation Matrix,1000xInformation Matrix
+93,Photon Spotlight Mining Technology,600xGravity Matrix,600xGravity Matrix,600xGravity Matrix,600xGravity Matrix
+94,Mesoscopic Quantum Entanglement,1000xElectromagnetic Matrix,1000xElectromagnetic Matrix,1000xEnergy Matrix,1000xEnergy Matrix
+95,Mesoscopic Quantum Entanglement,1000xStructure Matrix,1000xStructure Matrix,1000xInformation Matrix,1000xInformation Matrix
+96,Gravity Matrix,1600xElectromagnetic Matrix,1600xElectromagnetic Matrix,1600xEnergy Matrix,1600xEnergy Matrix
+97,Gravity Matrix,1600xStructure Matrix,1600xStructure Matrix,1600xStructure Matrix,1600xStructure Matrix
+98,Dirac Inversion Mechanism,3000xElectromagnetic Matrix,3000xElectromagnetic Matrix,3000xEnergy Matrix,3000xEnergy Matrix
+99,Dirac Inversion Mechanism,750xStructure Matrix,750xStructure Matrix,750xInformation Matrix,750xInformation Matrix
+100,Dirac Inversion Mechanism,1500xGravity Matrix,1500xGravity Matrix,1500xGravity Matrix,1500xGravity Matrix
+101,Controlled Annihilation Reaction,4000xEnergy Matrix,4000xEnergy Matrix,2000xGravity Matrix,2000xGravity Matrix
+102,Artificial Star,1200xElectromagnetic Matrix,1200xElectromagnetic Matrix,1200xEnergy Matrix,1200xEnergy Matrix
+103,Artificial Star,1200xStructure Matrix,1200xStructure Matrix,1200xInformation Matrix,1200xInformation Matrix
+104,Artificial Star,1200xGravity Matrix,1200xGravity Matrix,1200xGravity Matrix,1200xGravity Matrix
+105,Universe Matrix,2000xElectromagnetic Matrix,2000xElectromagnetic Matrix,2000xEnergy Matrix,2000xEnergy Matrix
+106,Universe Matrix,2000xStructure Matrix,2000xStructure Matrix,2000xInformation Matrix,2000xInformation Matrix
+107,Universe Matrix,2000xGravity Matrix,2000xGravity Matrix,2000xGravity Matrix,2000xGravity Matrix
+108,Mission Completed!,4000xUniverse Matrix,4000xUniverse Matrix,4000xUniverse Matrix,4000xUniverse Matrix

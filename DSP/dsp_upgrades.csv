@@ -1,0 +1,201 @@
+,Tech,Inputs,Inputs.1,Inputs.2,Inputs.3
+0,Universe Exploration (Lv1),10xElectromagnetic Matrix,10xElectromagnetic Matrix,10xElectromagnetic Matrix,10xElectromagnetic Matrix
+1,Universe Exploration (Lv2),200xElectromagnetic Matrix,200xElectromagnetic Matrix,200xElectromagnetic Matrix,200xElectromagnetic Matrix
+2,Universe Exploration (Lv3),1000xElectromagnetic Matrix,1000xElectromagnetic Matrix,1000xEnergy Matrix,1000xEnergy Matrix
+3,Universe Exploration (Lv3),1000xInformation Matrix,1000xInformation Matrix,1000xInformation Matrix,1000xInformation Matrix
+4,Universe Exploration (Lv4),2000xElectromagnetic Matrix,2000xElectromagnetic Matrix,2000xEnergy Matrix,2000xEnergy Matrix
+5,Universe Exploration (Lv4),2000xInformation Matrix,2000xInformation Matrix,2000xGravity Matrix,2000xGravity Matrix
+6,Mecha Core (Lv1),20xIron Ingot,20xIron Ingot,20xCopper Ingot,20xCopper Ingot
+7,Mecha Core (Lv2),100xElectromagnetic Matrix,100xElectromagnetic Matrix,100xEnergy Matrix,100xEnergy Matrix
+8,Mecha Core (Lv3),300xElectromagnetic Matrix,300xElectromagnetic Matrix,300xEnergy Matrix,300xEnergy Matrix
+9,Mecha Core (Lv3),300xStructure Matrix,300xStructure Matrix,300xStructure Matrix,300xStructure Matrix
+10,Mecha Core (Lv4),500xElectromagnetic Matrix,500xElectromagnetic Matrix,500xEnergy Matrix,500xEnergy Matrix
+11,Mecha Core (Lv4),500xStructure Matrix,500xStructure Matrix,500xInformation Matrix,500xInformation Matrix
+12,Mecha Core (Lv5),800xElectromagnetic Matrix,800xElectromagnetic Matrix,800xEnergy Matrix,800xEnergy Matrix
+13,Mecha Core (Lv5),800xStructure Matrix,800xStructure Matrix,800xInformation Matrix,800xInformation Matrix
+14,Mecha Core (Lv5),800xGravity Matrix,800xGravity Matrix,800xGravity Matrix,800xGravity Matrix
+15,Mecha Core (Lv6),1000xUniverse Matrix,1000xUniverse Matrix,1000xUniverse Matrix,1000xUniverse Matrix
+16,Mechanical Frame (Lv1),60xElectric Motor,60xElectric Motor,60xElectric Motor,60xElectric Motor
+17,Mechanical Frame (Lv2),200xElectromagnetic Matrix,200xElectromagnetic Matrix,200xEnergy Matrix,200xEnergy Matrix
+18,Mechanical Frame (Lv3),400xElectromagnetic Matrix,400xElectromagnetic Matrix,400xEnergy Matrix,400xEnergy Matrix
+19,Mechanical Frame (Lv4),600xElectromagnetic Matrix,600xElectromagnetic Matrix,600xEnergy Matrix,600xEnergy Matrix
+20,Mechanical Frame (Lv4),600xStructure Matrix,600xStructure Matrix,600xStructure Matrix,600xStructure Matrix
+21,Mechanical Frame (Lv5),800xElectromagnetic Matrix,800xElectromagnetic Matrix,800xEnergy Matrix,800xEnergy Matrix
+22,Mechanical Frame (Lv5),800xStructure Matrix,800xStructure Matrix,800xStructure Matrix,800xStructure Matrix
+23,Mechanical Frame (Lv6),1000xElectromagnetic Matrix,1000xElectromagnetic Matrix,1000xEnergy Matrix,1000xEnergy Matrix
+24,Mechanical Frame (Lv6),1000xStructure Matrix,1000xStructure Matrix,1000xInformation Matrix,1000xInformation Matrix
+25,Mechanical Frame (Lv7),1200xElectromagnetic Matrix,1200xElectromagnetic Matrix,1200xEnergy Matrix,1200xEnergy Matrix
+26,Mechanical Frame (Lv7),1200xStructure Matrix,1200xStructure Matrix,1200xInformation Matrix,1200xInformation Matrix
+27,Mechanical Frame (Lv8),2000xElectromagnetic Matrix,2000xElectromagnetic Matrix,2000xEnergy Matrix,2000xEnergy Matrix
+28,Mechanical Frame (Lv8),2000xStructure Matrix,2000xStructure Matrix,2000xInformation Matrix,2000xInformation Matrix
+29,Mechanical Frame (Lv8),2000xGravity Matrix,2000xGravity Matrix,2000xGravity Matrix,2000xGravity Matrix
+30,Inventory Capacity (Lv1),120xSteel,120xSteel,120xCircuit Board,120xCircuit Board
+31,Inventory Capacity (Lv2),200xElectromagnetic Matrix,200xElectromagnetic Matrix,200xEnergy Matrix,200xEnergy Matrix
+32,Inventory Capacity (Lv3),400xElectromagnetic Matrix,400xElectromagnetic Matrix,400xEnergy Matrix,400xEnergy Matrix
+33,Inventory Capacity (Lv3),400xStructure Matrix,400xStructure Matrix,400xStructure Matrix,400xStructure Matrix
+34,Inventory Capacity (Lv4),600xElectromagnetic Matrix,600xElectromagnetic Matrix,600xEnergy Matrix,600xEnergy Matrix
+35,Inventory Capacity (Lv4),600xStructure Matrix,600xStructure Matrix,600xStructure Matrix,600xStructure Matrix
+36,Inventory Capacity (Lv5),800xElectromagnetic Matrix,800xElectromagnetic Matrix,800xEnergy Matrix,800xEnergy Matrix
+37,Inventory Capacity (Lv5),800xStructure Matrix,800xStructure Matrix,800xStructure Matrix,800xStructure Matrix
+38,Inventory Capacity (Lv6),1000xElectromagnetic Matrix,1000xElectromagnetic Matrix,1000xEnergy Matrix,1000xEnergy Matrix
+39,Inventory Capacity (Lv6),1000xStructure Matrix,1000xStructure Matrix,1000xInformation Matrix,1000xInformation Matrix
+40,Inventory Capacity (Lv6),1000xGravity Matrix,1000xGravity Matrix,1000xGravity Matrix,1000xGravity Matrix
+41,Communication Control (Lv1),100xElectromagnetic Matrix,100xElectromagnetic Matrix,100xElectromagnetic Matrix,100xElectromagnetic Matrix
+42,Communication Control (Lv2),200xElectromagnetic Matrix,200xElectromagnetic Matrix,200xEnergy Matrix,200xEnergy Matrix
+43,Communication Control (Lv3),400xElectromagnetic Matrix,400xElectromagnetic Matrix,400xEnergy Matrix,400xEnergy Matrix
+44,Communication Control (Lv4),600xElectromagnetic Matrix,600xElectromagnetic Matrix,600xEnergy Matrix,600xEnergy Matrix
+45,Communication Control (Lv4),600xStructure Matrix,600xStructure Matrix,600xStructure Matrix,600xStructure Matrix
+46,Communication Control (Lv5),1000xElectromagnetic Matrix,1000xElectromagnetic Matrix,1000xEnergy Matrix,1000xEnergy Matrix
+47,Communication Control (Lv5),1000xStructure Matrix,1000xStructure Matrix,1000xInformation Matrix,1000xInformation Matrix
+48,Communication Control (Lv6),1600xElectromagnetic Matrix,1600xElectromagnetic Matrix,1600xEnergy Matrix,1600xEnergy Matrix
+49,Communication Control (Lv6),1600xStructure Matrix,1600xStructure Matrix,1600xInformation Matrix,1600xInformation Matrix
+50,Communication Control (Lv6),1600xGravity Matrix,1600xGravity Matrix,1600xGravity Matrix,1600xGravity Matrix
+51,Communication Control (Lv7),2000xUniverse Matrix,2000xUniverse Matrix,2000xUniverse Matrix,2000xUniverse Matrix
+52,Mass Construction (Lv1),100xCircuit Board,100xCircuit Board,100xCircuit Board,100xCircuit Board
+53,Mass Construction (Lv2),300xElectromagnetic Matrix,300xElectromagnetic Matrix,300xElectromagnetic Matrix,300xElectromagnetic Matrix
+54,Mass Construction (Lv3),500xElectromagnetic Matrix,500xElectromagnetic Matrix,500xEnergy Matrix,500xEnergy Matrix
+55,Mass Construction (Lv4),800xElectromagnetic Matrix,800xElectromagnetic Matrix,800xEnergy Matrix,800xEnergy Matrix
+56,Mass Construction (Lv4),800xStructure Matrix,800xStructure Matrix,800xStructure Matrix,800xStructure Matrix
+57,Mass Construction (Lv5),1000xElectromagnetic Matrix,1000xElectromagnetic Matrix,1000xEnergy Matrix,1000xEnergy Matrix
+58,Mass Construction (Lv5),1000xStructure Matrix,1000xStructure Matrix,1000xInformation Matrix,1000xInformation Matrix
+59,Energy Circuit (Lv1),60xLog,60xLog,60xCoal,60xCoal
+60,Energy Circuit (Lv1),60xEnergetic Graphite,60xEnergetic Graphite,60xEnergetic Graphite,60xEnergetic Graphite
+61,Energy Circuit (Lv2),400xElectromagnetic Matrix,400xElectromagnetic Matrix,400xEnergy Matrix,400xEnergy Matrix
+62,Energy Circuit (Lv3),1200xElectromagnetic Matrix,1200xElectromagnetic Matrix,1200xEnergy Matrix,1200xEnergy Matrix
+63,Energy Circuit (Lv3),1200xStructure Matrix,1200xStructure Matrix,1200xStructure Matrix,1200xStructure Matrix
+64,Energy Circuit (Lv4),2000xElectromagnetic Matrix,2000xElectromagnetic Matrix,2000xEnergy Matrix,2000xEnergy Matrix
+65,Energy Circuit (Lv4),2000xStructure Matrix,2000xStructure Matrix,2000xStructure Matrix,2000xStructure Matrix
+66,Energy Circuit (Lv5),3000xElectromagnetic Matrix,3000xElectromagnetic Matrix,3000xEnergy Matrix,3000xEnergy Matrix
+67,Energy Circuit (Lv5),3000xStructure Matrix,3000xStructure Matrix,3000xInformation Matrix,3000xInformation Matrix
+68,Energy Circuit (Lv5),3000xGravity Matrix,3000xGravity Matrix,3000xGravity Matrix,3000xGravity Matrix
+69,Energy Circuit (Lv6),4000xUniverse Matrix,4000xUniverse Matrix,4000xUniverse Matrix,4000xUniverse Matrix
+70,Drone Engine (Lv1),200xElectromagnetic Matrix,200xElectromagnetic Matrix,200xElectromagnetic Matrix,200xElectromagnetic Matrix
+71,Drone Engine (Lv2),400xElectromagnetic Matrix,400xElectromagnetic Matrix,400xEnergy Matrix,400xEnergy Matrix
+72,Drone Engine (Lv3),800xElectromagnetic Matrix,800xElectromagnetic Matrix,800xEnergy Matrix,800xEnergy Matrix
+73,Drone Engine (Lv3),800xStructure Matrix,800xStructure Matrix,800xStructure Matrix,800xStructure Matrix
+74,Drone Engine (Lv4),1200xElectromagnetic Matrix,1200xElectromagnetic Matrix,1200xEnergy Matrix,1200xEnergy Matrix
+75,Drone Engine (Lv4),1200xStructure Matrix,1200xStructure Matrix,1200xInformation Matrix,1200xInformation Matrix
+76,Drone Engine (Lv5),1600xElectromagnetic Matrix,1600xElectromagnetic Matrix,1600xEnergy Matrix,1600xEnergy Matrix
+77,Drone Engine (Lv5),1600xStructure Matrix,1600xStructure Matrix,1600xInformation Matrix,1600xInformation Matrix
+78,Drone Engine (Lv5),1600xGravity Matrix,1600xGravity Matrix,1600xGravity Matrix,1600xGravity Matrix
+79,Drone Engine (Lv6),2000xUniverse Matrix,2000xUniverse Matrix,2000xUniverse Matrix,2000xUniverse Matrix
+80,Drive Engine (Lv1),150xCoal,150xCoal,60xMagnetic Coil,60xMagnetic Coil
+81,Drive Engine (Lv2),200xElectromagnetic Matrix,200xElectromagnetic Matrix,200xEnergy Matrix,200xEnergy Matrix
+82,Drive Engine (Lv3),1000xElectromagnetic Matrix,1000xElectromagnetic Matrix,1000xEnergy Matrix,1000xEnergy Matrix
+83,Drive Engine (Lv3),1000xStructure Matrix,1000xStructure Matrix,1000xStructure Matrix,1000xStructure Matrix
+84,Drive Engine (Lv4),2000xElectromagnetic Matrix,2000xElectromagnetic Matrix,2000xEnergy Matrix,2000xEnergy Matrix
+85,Drive Engine (Lv4),2000xStructure Matrix,2000xStructure Matrix,2000xStructure Matrix,2000xStructure Matrix
+86,Drive Engine (Lv5),3000xElectromagnetic Matrix,3000xElectromagnetic Matrix,3000xEnergy Matrix,3000xEnergy Matrix
+87,Drive Engine (Lv5),3000xStructure Matrix,3000xStructure Matrix,3000xGravity Matrix,3000xGravity Matrix
+88,Drive Engine (Lv6),6000xUniverse Matrix,6000xUniverse Matrix,6000xUniverse Matrix,6000xUniverse Matrix
+89,Solar Sail Life (Lv1),400xElectromagnetic Matrix,400xElectromagnetic Matrix,400xEnergy Matrix,400xEnergy Matrix
+90,Solar Sail Life (Lv1),400xStructure Matrix,400xStructure Matrix,400xStructure Matrix,400xStructure Matrix
+91,Solar Sail Life (Lv2),600xElectromagnetic Matrix,600xElectromagnetic Matrix,600xEnergy Matrix,600xEnergy Matrix
+92,Solar Sail Life (Lv2),600xStructure Matrix,600xStructure Matrix,600xStructure Matrix,600xStructure Matrix
+93,Solar Sail Life (Lv3),800xElectromagnetic Matrix,800xElectromagnetic Matrix,800xEnergy Matrix,800xEnergy Matrix
+94,Solar Sail Life (Lv3),800xStructure Matrix,800xStructure Matrix,800xStructure Matrix,800xStructure Matrix
+95,Solar Sail Life (Lv4),1000xElectromagnetic Matrix,1000xElectromagnetic Matrix,1000xEnergy Matrix,1000xEnergy Matrix
+96,Solar Sail Life (Lv4),1000xStructure Matrix,1000xStructure Matrix,1000xInformation Matrix,1000xInformation Matrix
+97,Solar Sail Life (Lv5),1600xElectromagnetic Matrix,1600xElectromagnetic Matrix,1600xEnergy Matrix,1600xEnergy Matrix
+98,Solar Sail Life (Lv5),1600xStructure Matrix,1600xStructure Matrix,1600xInformation Matrix,1600xInformation Matrix
+99,Solar Sail Life (Lv6),2000xElectromagnetic Matrix,2000xElectromagnetic Matrix,2000xEnergy Matrix,2000xEnergy Matrix
+100,Solar Sail Life (Lv6),2000xStructure Matrix,2000xStructure Matrix,2000xInformation Matrix,2000xInformation Matrix
+101,Ray Transmission Efficiency (Lv1),600xElectromagnetic Matrix,600xElectromagnetic Matrix,600xEnergy Matrix,600xEnergy Matrix
+102,Ray Transmission Efficiency (Lv1),600xStructure Matrix,600xStructure Matrix,600xStructure Matrix,600xStructure Matrix
+103,Ray Transmission Efficiency (Lv2),800xElectromagnetic Matrix,800xElectromagnetic Matrix,800xEnergy Matrix,800xEnergy Matrix
+104,Ray Transmission Efficiency (Lv2),800xStructure Matrix,800xStructure Matrix,800xStructure Matrix,800xStructure Matrix
+105,Ray Transmission Efficiency (Lv3),1000xElectromagnetic Matrix,1000xElectromagnetic Matrix,1000xEnergy Matrix,1000xEnergy Matrix
+106,Ray Transmission Efficiency (Lv3),1000xStructure Matrix,1000xStructure Matrix,1000xStructure Matrix,1000xStructure Matrix
+107,Ray Transmission Efficiency (Lv4),1200xElectromagnetic Matrix,1200xElectromagnetic Matrix,1200xEnergy Matrix,1200xEnergy Matrix
+108,Ray Transmission Efficiency (Lv4),1200xStructure Matrix,1200xStructure Matrix,1200xInformation Matrix,1200xInformation Matrix
+109,Ray Transmission Efficiency (Lv5),1400xElectromagnetic Matrix,1400xElectromagnetic Matrix,1400xEnergy Matrix,1400xEnergy Matrix
+110,Ray Transmission Efficiency (Lv5),1400xStructure Matrix,1400xStructure Matrix,1400xInformation Matrix,1400xInformation Matrix
+111,Ray Transmission Efficiency (Lv6),1600xElectromagnetic Matrix,1600xElectromagnetic Matrix,1600xEnergy Matrix,1600xEnergy Matrix
+112,Ray Transmission Efficiency (Lv6),1600xStructure Matrix,1600xStructure Matrix,1600xInformation Matrix,1600xInformation Matrix
+113,Ray Transmission Efficiency (Lv6),1600xGravity Matrix,1600xGravity Matrix,1600xGravity Matrix,1600xGravity Matrix
+114,Ray Transmission Efficiency (Lv7),1800xElectromagnetic Matrix,1800xElectromagnetic Matrix,1800xEnergy Matrix,1800xEnergy Matrix
+115,Ray Transmission Efficiency (Lv7),1800xStructure Matrix,1800xStructure Matrix,1800xInformation Matrix,1800xInformation Matrix
+116,Ray Transmission Efficiency (Lv7),1800xGravity Matrix,1800xGravity Matrix,1800xGravity Matrix,1800xGravity Matrix
+117,Ray Transmission Efficiency (Lv8),2000xUniverse Matrix,2000xUniverse Matrix,2000xUniverse Matrix,2000xUniverse Matrix
+118,Vertical Construction (Lv1),400xEnergy Matrix,400xEnergy Matrix,400xEnergy Matrix,400xEnergy Matrix
+119,Vertical Construction (Lv2),600xEnergy Matrix,600xEnergy Matrix,600xEnergy Matrix,600xEnergy Matrix
+120,Vertical Construction (Lv3),800xEnergy Matrix,800xEnergy Matrix,800xStructure Matrix,800xStructure Matrix
+121,Vertical Construction (Lv4),1000xElectromagnetic Matrix,1000xElectromagnetic Matrix,1000xEnergy Matrix,1000xEnergy Matrix
+122,Vertical Construction (Lv4),1000xStructure Matrix,1000xStructure Matrix,1000xStructure Matrix,1000xStructure Matrix
+123,Vertical Construction (Lv5),1600xElectromagnetic Matrix,1600xElectromagnetic Matrix,1600xEnergy Matrix,1600xEnergy Matrix
+124,Vertical Construction (Lv5),1600xStructure Matrix,1600xStructure Matrix,1600xStructure Matrix,1600xStructure Matrix
+125,Vertical Construction (Lv6),2000xElectromagnetic Matrix,2000xElectromagnetic Matrix,2000xEnergy Matrix,2000xEnergy Matrix
+126,Vertical Construction (Lv6),2000xStructure Matrix,2000xStructure Matrix,2000xGravity Matrix,2000xGravity Matrix
+127,Sorter Cargo Stacking (Lv1),400xElectromagnetic Matrix,400xElectromagnetic Matrix,400xEnergy Matrix,400xEnergy Matrix
+128,Sorter Cargo Stacking (Lv1),400xStructure Matrix,400xStructure Matrix,400xStructure Matrix,400xStructure Matrix
+129,Sorter Cargo Stacking (Lv2),600xElectromagnetic Matrix,600xElectromagnetic Matrix,600xEnergy Matrix,600xEnergy Matrix
+130,Sorter Cargo Stacking (Lv2),600xStructure Matrix,600xStructure Matrix,600xStructure Matrix,600xStructure Matrix
+131,Sorter Cargo Stacking (Lv3),800xElectromagnetic Matrix,800xElectromagnetic Matrix,800xEnergy Matrix,800xEnergy Matrix
+132,Sorter Cargo Stacking (Lv3),800xStructure Matrix,800xStructure Matrix,800xStructure Matrix,800xStructure Matrix
+133,Sorter Cargo Stacking (Lv4),1000xElectromagnetic Matrix,1000xElectromagnetic Matrix,1000xEnergy Matrix,1000xEnergy Matrix
+134,Sorter Cargo Stacking (Lv4),1000xStructure Matrix,1000xStructure Matrix,1000xStructure Matrix,1000xStructure Matrix
+135,Sorter Cargo Stacking (Lv5),1500xElectromagnetic Matrix,1500xElectromagnetic Matrix,1500xEnergy Matrix,1500xEnergy Matrix
+136,Sorter Cargo Stacking (Lv5),1500xStructure Matrix,1500xStructure Matrix,1500xStructure Matrix,1500xStructure Matrix
+137,Distribution Range (Lv1),400xElectromagnetic Matrix,400xElectromagnetic Matrix,400xEnergy Matrix,400xEnergy Matrix
+138,Distribution Range (Lv2),600xElectromagnetic Matrix,600xElectromagnetic Matrix,600xEnergy Matrix,600xEnergy Matrix
+139,Distribution Range (Lv2),600xStructure Matrix,600xStructure Matrix,600xStructure Matrix,600xStructure Matrix
+140,Distribution Range (Lv3),800xElectromagnetic Matrix,800xElectromagnetic Matrix,800xEnergy Matrix,800xEnergy Matrix
+141,Distribution Range (Lv3),800xStructure Matrix,800xStructure Matrix,800xStructure Matrix,800xStructure Matrix
+142,Distribution Range (Lv4),1000xElectromagnetic Matrix,1000xElectromagnetic Matrix,1000xEnergy Matrix,1000xEnergy Matrix
+143,Distribution Range (Lv4),1000xStructure Matrix,1000xStructure Matrix,1000xInformation Matrix,1000xInformation Matrix
+144,Distribution Range (Lv5),1200xElectromagnetic Matrix,1200xElectromagnetic Matrix,1200xEnergy Matrix,1200xEnergy Matrix
+145,Distribution Range (Lv5),1200xStructure Matrix,1200xStructure Matrix,1200xInformation Matrix,1200xInformation Matrix
+146,Distribution Range (Lv5),1200xGravity Matrix,1200xGravity Matrix,1200xGravity Matrix,1200xGravity Matrix
+147,Logistics Carrier Engine (Lv1),400xElectromagnetic Matrix,400xElectromagnetic Matrix,400xEnergy Matrix,400xEnergy Matrix
+148,Logistics Carrier Engine (Lv1),400xStructure Matrix,400xStructure Matrix,400xStructure Matrix,400xStructure Matrix
+149,Logistics Carrier Engine (Lv2),600xElectromagnetic Matrix,600xElectromagnetic Matrix,600xEnergy Matrix,600xEnergy Matrix
+150,Logistics Carrier Engine (Lv2),600xStructure Matrix,600xStructure Matrix,600xStructure Matrix,600xStructure Matrix
+151,Logistics Carrier Engine (Lv3),800xElectromagnetic Matrix,800xElectromagnetic Matrix,800xEnergy Matrix,800xEnergy Matrix
+152,Logistics Carrier Engine (Lv3),800xStructure Matrix,800xStructure Matrix,800xStructure Matrix,800xStructure Matrix
+153,Logistics Carrier Engine (Lv4),1000xElectromagnetic Matrix,1000xElectromagnetic Matrix,1000xEnergy Matrix,1000xEnergy Matrix
+154,Logistics Carrier Engine (Lv4),1000xStructure Matrix,1000xStructure Matrix,1000xInformation Matrix,1000xInformation Matrix
+155,Logistics Carrier Engine (Lv5),1200xElectromagnetic Matrix,1200xElectromagnetic Matrix,1200xEnergy Matrix,1200xEnergy Matrix
+156,Logistics Carrier Engine (Lv5),1200xStructure Matrix,1200xStructure Matrix,1200xInformation Matrix,1200xInformation Matrix
+157,Logistics Carrier Engine (Lv5),1200xGravity Matrix,1200xGravity Matrix,1200xGravity Matrix,1200xGravity Matrix
+158,Logistics Carrier Engine (Lv6),1600xElectromagnetic Matrix,1600xElectromagnetic Matrix,1600xEnergy Matrix,1600xEnergy Matrix
+159,Logistics Carrier Engine (Lv6),1600xStructure Matrix,1600xStructure Matrix,1600xInformation Matrix,1600xInformation Matrix
+160,Logistics Carrier Engine (Lv6),1600xGravity Matrix,1600xGravity Matrix,1600xGravity Matrix,1600xGravity Matrix
+161,Logistics Carrier Engine (Lv7),2000xUniverse Matrix,2000xUniverse Matrix,2000xUniverse Matrix,2000xUniverse Matrix
+162,Logistics Station Integrated Logistics (Lv1),8000xUniverse Matrix,8000xUniverse Matrix,8000xUniverse Matrix,8000xUniverse Matrix
+163,Logistics Station Integrated Logistics (Lv2),16000xUniverse Matrix,16000xUniverse Matrix,16000xUniverse Matrix,16000xUniverse Matrix
+164,Logistics Station Integrated Logistics (Lv3),24000xUniverse Matrix,24000xUniverse Matrix,24000xUniverse Matrix,24000xUniverse Matrix
+165,Logistics Carrier Capacity (Lv1),400xElectromagnetic Matrix,400xElectromagnetic Matrix,400xEnergy Matrix,400xEnergy Matrix
+166,Logistics Carrier Capacity (Lv1),400xStructure Matrix,400xStructure Matrix,400xStructure Matrix,400xStructure Matrix
+167,Logistics Carrier Capacity (Lv2),600xElectromagnetic Matrix,600xElectromagnetic Matrix,600xEnergy Matrix,600xEnergy Matrix
+168,Logistics Carrier Capacity (Lv2),600xStructure Matrix,600xStructure Matrix,600xStructure Matrix,600xStructure Matrix
+169,Logistics Carrier Capacity (Lv3),800xElectromagnetic Matrix,800xElectromagnetic Matrix,800xEnergy Matrix,800xEnergy Matrix
+170,Logistics Carrier Capacity (Lv3),800xStructure Matrix,800xStructure Matrix,800xStructure Matrix,800xStructure Matrix
+171,Logistics Carrier Capacity (Lv4),1000xElectromagnetic Matrix,1000xElectromagnetic Matrix,1000xEnergy Matrix,1000xEnergy Matrix
+172,Logistics Carrier Capacity (Lv4),1000xStructure Matrix,1000xStructure Matrix,1000xStructure Matrix,1000xStructure Matrix
+173,Logistics Carrier Capacity (Lv5),1200xElectromagnetic Matrix,1200xElectromagnetic Matrix,1200xEnergy Matrix,1200xEnergy Matrix
+174,Logistics Carrier Capacity (Lv5),1200xStructure Matrix,1200xStructure Matrix,1200xInformation Matrix,1200xInformation Matrix
+175,Logistics Carrier Capacity (Lv6),1600xElectromagnetic Matrix,1600xElectromagnetic Matrix,1600xEnergy Matrix,1600xEnergy Matrix
+176,Logistics Carrier Capacity (Lv6),1600xStructure Matrix,1600xStructure Matrix,1600xInformation Matrix,1600xInformation Matrix
+177,Logistics Carrier Capacity (Lv7),2000xElectromagnetic Matrix,2000xElectromagnetic Matrix,2000xEnergy Matrix,2000xEnergy Matrix
+178,Logistics Carrier Capacity (Lv7),2000xStructure Matrix,2000xStructure Matrix,2000xInformation Matrix,2000xInformation Matrix
+179,Logistics Carrier Capacity (Lv7),2000xGravity Matrix,2000xGravity Matrix,2000xGravity Matrix,2000xGravity Matrix
+180,Logistics Carrier Capacity (Lv8),4000xElectromagnetic Matrix,4000xElectromagnetic Matrix,4000xEnergy Matrix,4000xEnergy Matrix
+181,Logistics Carrier Capacity (Lv8),4000xStructure Matrix,4000xStructure Matrix,4000xInformation Matrix,4000xInformation Matrix
+182,Logistics Carrier Capacity (Lv8),4000xGravity Matrix,4000xGravity Matrix,4000xGravity Matrix,4000xGravity Matrix
+183,Logistics Carrier Capacity (Lv9),6000xUniverse Matrix,6000xUniverse Matrix,6000xUniverse Matrix,6000xUniverse Matrix
+184,Logistics Carrier Capacity (Lv12),12000xUniverse Matrix,12000xUniverse Matrix,12000xUniverse Matrix,12000xUniverse Matrix
+185,Veins Utilization (Lv1),400xElectromagnetic Matrix,400xElectromagnetic Matrix,400xEnergy Matrix,400xEnergy Matrix
+186,Veins Utilization (Lv2),1000xElectromagnetic Matrix,1000xElectromagnetic Matrix,1000xEnergy Matrix,1000xEnergy Matrix
+187,Veins Utilization (Lv2),1000xStructure Matrix,1000xStructure Matrix,1000xStructure Matrix,1000xStructure Matrix
+188,Veins Utilization (Lv3),1000xElectromagnetic Matrix,1000xElectromagnetic Matrix,1000xEnergy Matrix,1000xEnergy Matrix
+189,Veins Utilization (Lv3),1000xStructure Matrix,1000xStructure Matrix,1000xInformation Matrix,1000xInformation Matrix
+190,Veins Utilization (Lv4),1600xElectromagnetic Matrix,1600xElectromagnetic Matrix,1600xEnergy Matrix,1600xEnergy Matrix
+191,Veins Utilization (Lv4),1600xStructure Matrix,1600xStructure Matrix,1600xInformation Matrix,1600xInformation Matrix
+192,Veins Utilization (Lv5),2000xElectromagnetic Matrix,2000xElectromagnetic Matrix,2000xEnergy Matrix,2000xEnergy Matrix
+193,Veins Utilization (Lv5),2000xStructure Matrix,2000xStructure Matrix,2000xInformation Matrix,2000xInformation Matrix
+194,Veins Utilization (Lv5),2000xGravity Matrix,2000xGravity Matrix,2000xGravity Matrix,2000xGravity Matrix
+195,Veins Utilization (Lv6),4000xUniverse Matrix,4000xUniverse Matrix,4000xUniverse Matrix,4000xUniverse Matrix
+196,Research Speed (Lv1),1000xInformation Matrix,1000xInformation Matrix,1000xInformation Matrix,1000xInformation Matrix
+197,Research Speed (Lv2),2000xInformation Matrix,2000xInformation Matrix,2000xInformation Matrix,2000xInformation Matrix
+198,Research Speed (Lv3),4000xInformation Matrix,4000xInformation Matrix,4000xInformation Matrix,4000xInformation Matrix
+199,Research Speed (Lv4),8000xUniverse Matrix,8000xUniverse Matrix,8000xUniverse Matrix,8000xUniverse Matrix

@@ -1,8 +1,8 @@
 from Commentary import Commentary
 
 def print_to_cl(func):
-    def wrapper(*args, **kwargs):
-        result = func(*args, **kwargs)
+    def wrapper(self, *args, **kwargs):
+        result = func(self, *args, **kwargs)
         print(result)
         return result
     return wrapper
@@ -10,7 +10,7 @@ def print_to_cl(func):
 
 class CommandLineCommentary(Commentary):
     @print_to_cl
-    def shuffle_deck():
+    def shuffle_deck(self):
         return super().shuffle_deck()
     
     @print_to_cl
@@ -48,3 +48,6 @@ class CommandLineCommentary(Commentary):
     @print_to_cl
     def final_score(self, scores):
         return super().final_score(scores)
+    
+    def get_player_choice(self):
+        return super().get_player_choice() + 'Y/N '

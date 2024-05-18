@@ -35,3 +35,6 @@ class Commentary:
     
     def continue_play(self):
         return "Would you like to play? "
+
+    def get_player_choice(self):
+        return "Would you like to continue? "

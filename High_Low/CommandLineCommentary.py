@@ -1,14 +1,14 @@
 from Commentary import Commentary
 
-def print_to_cl(func):
-    def wrapper(self, *args, **kwargs):
-        result = func(self, *args, **kwargs)
-        print(result)
-        return result
-    return wrapper
-
-
 class CommandLineCommentary(Commentary):
+    def print_to_cl(func):
+        def wrapper(self, *args):
+            print(self, *args)
+            result = self.func(*args)
+            print(result)
+            return result
+        return wrapper
+
     @print_to_cl
     def shuffle_deck(self):
         return super().shuffle_deck()
@@ -26,7 +26,7 @@ class CommandLineCommentary(Commentary):
         return super().display_player_choice(choice)
     
     @print_to_cl
-    def lose(self):
+    def lose(self): 
         return super().lose()
     
     @print_to_cl

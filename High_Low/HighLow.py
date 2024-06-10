@@ -31,7 +31,7 @@ class HighLow:
     def round(self, deck: Deck):
         dealer_card = deck.get_random_card()
         player_card = deck.get_random_card()
-#        self.commentary.display_dealer_card(dealer_card)
+        self.commentary.display_dealer_card(dealer_card)
         if dealer_card.number == 2:
             player_choice = 'h'
         elif dealer_card.number == 14:

@@ -10,7 +10,7 @@ class Commentary:
         return f"Your card is: {card}"
     
     def display_player_choice(self, choice):
-        return "You chose " + {'h': 'Higher', 'l': 'Lower'}[choice]
+        return "You chose " + {'h': 'Higher', 'l': 'Lower'}[choice.lower()]
     
     def lose(self):
         return "You have lost"

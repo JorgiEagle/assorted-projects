@@ -10,6 +10,8 @@ class SudokuGUI:
         self.create_grid()
         self.submit_button = tk.Button(root, text="Submit", command=self.submit)
         self.submit_button.grid(row=9, columnspan=9)
+        self.reset_button = tk.Button(root, text="Reset", command=self.reset)
+        self.reset_button.grid(row=9, column=7)
         self.error_label = tk.Label(root, text="", fg="red")
         self.error_label.grid(row=10, columnspan=9)
         self.solver = SudokuSolver()
@@ -18,6 +20,7 @@ class SudokuGUI:
         for i in range(9):
             for j in range(9):
                 self.entries[i][j].grid(row=i, column=j, padx=(2 if j % 3 == 0 else 0, 2 if (j+1) % 3 == 0 else 0), pady=(2 if i % 3 == 0 else 0, 2 if (i+1) % 3 == 0 else 0))
+                self.entries[i][j].bind("<KeyRelease>", self.on_key_release)
 
     def submit(self):
         values = []
@@ -32,7 +35,7 @@ class SudokuGUI:
                 else:
                     values.append(None)
         self.solver.set_initial_grid(values)
-        invalid_indices = self.solver.validate(values)
+        invalid_indices = self.solver.validate()
         if invalid_indices:
             self.highlight_errors(invalid_indices)
             self.error_label.config(text="Invalid input detected. Please correct the highlighted cells.")
@@ -41,6 +44,10 @@ class SudokuGUI:
             new_values = self.solver.solve()
             self.fill_grid(new_values)
 
+    def reset(self):
+        self.entries = [["" for _ in range(9)] for _ in range(9)]
+        self.error_label.config(text="Values Reset")
+
     def highlight_errors(self, indices):
         for i in range(9):
             for j in range(9):
@@ -48,7 +55,38 @@ class SudokuGUI:
                 if idx in indices:
                     self.entries[i][j].config(bg="#FA8072")
                 else:
-                    self.entries[i][j].config(bg="white")       
+                    self.entries[i][j].config(bg="white")
+
+    def move_focus(self, event):
+        widget = event.widget
+        row, col = int(widget.grid_info()["row"]), int(widget.grid_info()["column"])
+        if col < len(self.entries[row]) - 1:
+            self.entries[row][col + 1].focus()
+        elif row < len(self.entries) - 1:
+            self.entries[row + 1][0].focus()
+        else:
+            self.entries[0][0]
+
+    def restrict_to_digit(self, event):
+        widget = event.widget
+        content = widget.get()
+        if not all(x in ["1", "2", "3", "4", "5", "6", "7", "8", "9"] for x in content):
+            widget.delete(0, tk.END)
+            return False
+        return True
+
+    def restrict_to_one(self, event):
+        widget = event.widget
+        content = widget.get()
+        if len(content) > 1:
+            widget.delete(0, tk.END)
+            widget.insert(0, content[-1])
+
+    def on_key_release(self, event):
+        digit = self.restrict_to_digit(event)
+        if digit:
+            self.restrict_to_one(event)
+            self.move_focus(event)
 
     def fill_grid(self, values):
         for i in range(9):
@@ -62,6 +100,4 @@ class SudokuGUI:
 if __name__ == "__main__":
     root = tk.Tk()
     gui = SudokuGUI(root)
-    sample_values = [i if i % 2 == 0 else None for i in range(81)]  # Sample data to fill the grid
-    gui.fill_grid(sample_values)
     root.mainloop()

@@ -1,0 +1,2 @@
+class InvalidSolution(Exception):
+    pass

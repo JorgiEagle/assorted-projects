@@ -35,7 +35,7 @@ class SudokuSolver:
         single_options = set()
         axis_set = sector_func(index)
         for guess_set in axis_set:
-            if guess_set is not None: 
+            if guess_set is not None:
                 single_options.symmetric_difference_update(guess_set)
         for index, entry in enumerate(axis_set):
             eligable = entry.intersection(single_options)

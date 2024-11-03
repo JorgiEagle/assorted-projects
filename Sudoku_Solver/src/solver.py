@@ -1,50 +1,86 @@
 from utils import get_column, get_row, get_sector
 from cell import GridCell
+from typing import Iterable
+from itertools import chain
+from exceptions import InvalidSolution
 
 
 class SudokuSolver:
     def __init__(self, input_grid: list):
         self.grid = [GridCell(value) for value in input_grid]
+        # TODO see if using to_solve set is more efficient
         for index, cell in enumerate(self.grid):
             cell.initialise_axies(self.get_grid_row(index), self.get_grid_column(index), self.get_grid_sector(index))
 
     def get_grid_row(self, position):
-        return get_row(self.grid, position)
+        row = get_row(self.grid, position)
+        row.remove(self)
+        return row
 
     def get_grid_column(self, position):
-        return get_column(self.grid, position)
+        column = get_column(self.grid, position)
+        column.remove(self)
+        return column
 
     def get_grid_sector(self, position):
-        return get_sector(self.grid, position)
+        sector = get_sector(self.grid, position)
+        sector.remove(self)
+        return sector
 
-    def consolidate_solution(self):
+    @staticmethod
+    def convert_guess_to_solution(cell: 'GridCell'):
+        if len(cell.guess) != 1:
+            raise ValueError(f"Too many guesses to insert solution: {len(cell.guess)}")
+        else:
+            cell.insert_solution(*cell.guess)
+
+    @staticmethod
+    def propagate_solution(cell: 'GridCell'):
+        for cell in chain(*cell.axies):
+            if not cell:
+                cell.remove_single_guess_value(cell.solution)
+                if len(cell.guess) == 1:
+                    SudokuSolver.insert_solution(cell)
+
+    @staticmethod
+    def insert_solution(cell: 'GridCell'):
+        SudokuSolver.convert_guess_to_solution(cell)
+        SudokuSolver.propagate_solution(cell)
+
+    @staticmethod
+    def consolidate_solution(grid: Iterable[GridCell]):
         changed = True
         while changed:
             changed = False
-            for cell in self.grid:
+            for cell in grid:
                 if cell:
                     continue
-                changed |= cell.update_guess()
+                cell.update_guess()
+                match len(cell.guess):
+                    case 0:
+                        raise InvalidSolution
+                    case 1:
+                        SudokuSolver.insert_solution(cell)
+                        changed = True
 
-    def validate(self):
-        return False
-
-    def fill_single_options_in_axis(self,  index: int):
+    def fill_single_options_in_axis(self):
         """ Fills in all positions where that number is the only position available for that axis"""
-        cell = self.grid[index]
-        for axis in cell.axies:
-            unique_value = cell.guess.difference(
-                set().union(other_cell.guess for other_cell in axis if other_cell is not cell)
-                )
-            if len(unique_value) == 1:
-                cell.insert_solution(*unique_value)
+        for cell in self.grid:
+            if cell:
+                continue
+            for axis in cell.axies:
+                unique_value = cell.guess.difference(
+                    set().union(other_cell.guess for other_cell in axis if other_cell is not cell)
+                    )
+                if len(unique_value) == 1:
+                    cell.insert_solution(*unique_value)
 
     def solve(self) -> list:
         count = 0
         while not all(self.grid) and count < 100:
-            self.consolidate_solution()
+            SudokuSolver.consolidate_solution(self.grid)
             self.fill_single_options_in_axis()
-        return self.solution
+        return self.grid
 
 
 def main():

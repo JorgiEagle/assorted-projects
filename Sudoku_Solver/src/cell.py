@@ -50,13 +50,8 @@ class GridCell(Cell):
     def __repr__(self):
         return "Grid" + super().__repr__()
 
-    def update_guess(self) -> bool:
+    def update_guess(self) -> None:
         for axis in self.axies:
             self.remove_guess_set({cell.solution for cell in axis if cell.solution})
         if len(self.guess) == 0:
             raise InvalidSolution
-        if len(self.guess) == 1:
-            self.insert_solution(*self.guess)
-            return True
-        else:
-            return False

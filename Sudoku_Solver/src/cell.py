@@ -3,22 +3,21 @@ from exceptions import InvalidSolution
 
 
 class Cell:
-    def __init__(self, row: list, column: list, sector: list, value: int = None):
+    def __init__(self, value: int = None):
         if value:
             self.insert_solution(value)
         else:
-            self.solution = None
-            self.guess = set(range(1, 10))
-        self.row: Iterable[Cell] = None
-        self.column: Iterable[Cell] = None
-        self.sector: Iterable[Cell] = None
-        self.axies = [row, column, sector]
+            self.solution: int = None
+            self.guess: set = set(range(1, 10))
+
+    def __bool__(self):
+        return bool(self.solution)
 
     def _set_solution(self, value: int) -> None:
-        self.solution = value
+        self.solution: int = value
 
     def _set_guess(self, value: set) -> None:
-        self.guess = value
+        self.guess: set = value
 
     def insert_solution(self, value: int) -> None:
         self._set_solution(value)
@@ -32,12 +31,32 @@ class Cell:
             return False
 
     def remove_guess_set(self, set_to_remove: set) -> None:
-        self.guess_set = self.guess_set.difference(set_to_remove)
+        self.guess.difference_update(set_to_remove)
 
-    def update_guess(self):
+    def __str__(self):
+        return f"Cell {self.solution if self.solution else self.guess}"
+
+    def __repr__(self):
+        return f"Cell({self.solution})"
+
+
+class GridCell(Cell):
+    def initialise_axies(self, row: list['GridCell'], column: list['GridCell'], sector: list['GridCell']) -> None:
+        self.row: Iterable[Cell] = row
+        self.column: Iterable[Cell] = column
+        self.sector: Iterable[Cell] = sector
+        self.axies = [row, column, sector]
+
+    def __repr__(self):
+        return "Grid" + super().__repr__()
+
+    def update_guess(self) -> bool:
         for axis in self.axies:
-            self.guess.difference_update({cell.solution for cell in axis if cell.solution})
+            self.remove_guess_set({cell.solution for cell in axis if cell.solution})
         if len(self.guess) == 0:
             raise InvalidSolution
         if len(self.guess) == 1:
-            self.insert_solution(self.guess.pop())
+            self.insert_solution(*self.guess)
+            return True
+        else:
+            return False

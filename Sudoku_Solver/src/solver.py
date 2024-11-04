@@ -12,20 +12,22 @@ class SudokuSolver:
         for index, cell in enumerate(self.grid):
             cell.initialise_axies(self.get_grid_row(index), self.get_grid_column(index), self.get_grid_sector(index))
 
+    def __str__(self):
+        output = ''
+        for line in range(9):
+            for sector in range(0, 9, 3):
+                output += ", ".join(map(lambda x: str(x.solution), self.grid[line+sector: line+sector+3])) + "\t"
+            output += '\n'
+        return output
+            
     def get_grid_row(self, position):
-        row = get_row(self.grid, position)
-        row.remove(self)
-        return row
+        return get_row(self.grid, position)
 
     def get_grid_column(self, position):
-        column = get_column(self.grid, position)
-        column.remove(self)
-        return column
+        return get_column(self.grid, position)
 
     def get_grid_sector(self, position):
-        sector = get_sector(self.grid, position)
-        sector.remove(self)
-        return sector
+        return get_sector(self.grid, position)
 
     @staticmethod
     def convert_guess_to_solution(cell: 'GridCell'):
@@ -35,12 +37,12 @@ class SudokuSolver:
             cell.insert_solution(*cell.guess)
 
     @staticmethod
-    def propagate_solution(cell: 'GridCell'):
-        for cell in chain(*cell.axies):
-            if not cell:
-                cell.remove_single_guess_value(cell.solution)
-                if len(cell.guess) == 1:
-                    SudokuSolver.insert_solution(cell)
+    def propagate_solution(source_cell: 'GridCell'):
+        for neighbour_cell in chain(*source_cell.axies):
+            if not neighbour_cell:
+                neighbour_cell.remove_single_guess_value(source_cell.solution)
+                if len(neighbour_cell.guess) == 1:
+                    SudokuSolver.insert_solution(neighbour_cell)
 
     @staticmethod
     def insert_solution(cell: 'GridCell'):
@@ -70,34 +72,36 @@ class SudokuSolver:
                 continue
             for axis in cell.axies:
                 unique_value = cell.guess.difference(
-                    set().union(other_cell.guess for other_cell in axis if other_cell is not cell)
+                    set().union(*[other_cell.guess for other_cell in axis if (other_cell is not cell
+                                                                              and other_cell.guess is not None)])
                     )
                 if len(unique_value) == 1:
                     cell.insert_solution(*unique_value)
+                    break
 
     def solve(self) -> list:
         count = 0
-        while not all(self.grid) and count < 100:
-            SudokuSolver.consolidate_solution(self.grid)
-            self.fill_single_options_in_axis()
+        SudokuSolver.consolidate_solution(self.grid)
+        self.fill_single_options_in_axis()
         return self.grid
 
 
 def main():
     test_grid = [
-        4, 3, None,     None, None, None,   1, 9, None,
-        7, None, 2,     9, None, None,       None, 8, None,
-        None, None, None,    None, None, 6, 3, None, None,
+        4, 3, None,         None, None, None,   1, 9, None,
+        7, None, 2,         9, None, None,      None, 8, None,
+        None, None, None,   None, None, 6,      3, None, None,
 
-        5, 1, 7,    4, 3, None,     9, None, 8,
-        3, 8, None,     6, 9, 7,    5, None, 2,
-        None, None, None,    None, None, 1,     7, None, 4,
+        5, 1, 7,            4, 3, None,         9, None, 8,
+        3, 8, None,         6, 9, 7,            5, None, 2,
+        None, None, None,   None, None, 1,      7, None, 4,
 
-        None, 2, None,  None, None, None,    None, 7, None,
-        None, None, None,  3, 2, None,  8, None, None,
-        1, None, 3,     None, 6, 8,     None, None, None]
+        None, 2, None,      None, None, None,   None, 7, None,
+        None, None, None,   None,  3, 2, None,  8, None, None,
+        1, None, 3,         None, 6, 8,         None, None, None]
     solver = SudokuSolver(test_grid)
     solver.solve()
+    print(solver)
 
 
 if __name__ == "__main__":

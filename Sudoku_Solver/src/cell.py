@@ -46,6 +46,8 @@ class GridCell(Cell):
         self.column: Iterable[Cell] = column
         self.sector: Iterable[Cell] = sector
         self.axies = [row, column, sector]
+        for axis in self.axies:
+            axis.remove(self)
 
     def __repr__(self):
         return "Grid" + super().__repr__()

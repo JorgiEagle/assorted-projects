@@ -19,22 +19,26 @@ class FarkleRoll:
                                           ] for number_of_dice in range(1, 7)}
         cls.winning_rolls = {x: {roll for roll in cls.all_rolls[x] if not cls.check_roll(roll)} for x in range(1, 7)}
 
+    @staticmethod
     def triple_double(roll_tuple) -> bool:
         return tuple(roll_tuple).count(2) == 3
 
+    @staticmethod
     def straight(roll_tuple) -> bool:
         return roll_tuple == (1, 1, 1, 1, 1, 1)
         # return all(x==1 for x in roll_tuple)
 
+    @staticmethod
     def triple_or_better(roll_tuple) -> bool:
         return any(x >= 3 for x in roll_tuple)
 
+    @staticmethod
     def one_or_five(roll_tuple) -> bool:
         return roll_tuple[0] or roll_tuple[4]
 
+    @staticmethod
     def check_roll(roll_tuple) -> bool:
-        return not any(func(roll_tuple) for func in [FarkleRoll.triple_double, FarkleRoll.straight,
-                                                     FarkleRoll.triple_or_better, FarkleRoll.one_or_five])
-
+        return not any(func(roll_tuple) for func in [FarkleRoll.triple_double, FarkleRoll.triple_or_better,
+                                                     FarkleRoll.one_or_five])
 
 FarkleRoll.generate_rolls()

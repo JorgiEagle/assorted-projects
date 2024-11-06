@@ -35,3 +35,6 @@ class FarkleRoll:
     def check_roll(roll_tuple) -> bool:
         return not any(func(roll_tuple) for func in [FarkleRoll.triple_double, FarkleRoll.straight,
                                                      FarkleRoll.triple_or_better, FarkleRoll.one_or_five])
+
+
+FarkleRoll.generate_rolls()

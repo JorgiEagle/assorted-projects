@@ -4,7 +4,6 @@ from abc import abstractmethod
 from enum import Enum
 
 from FarkleRoll import FarkleRoll
-FarkleRoll.generate_rolls()
 
 
 class InvalidStateError(RuntimeError):
@@ -76,17 +75,20 @@ class FarkleGame:
         self.check_state(GameState.DICE_ROLL)
         self.set_state(GameState.PICK_OPTION)
         possible_options = []
-        # one or five options:
-        for no_ones in range(self.current_roll[0]+1):
-            for no_fives in range(self.current_roll[4]+1):
+        # single one or five options:
+        ones_and_fives = []
+        for no_ones in range(0, min(self.current_roll[0]+1, 3)):
+            for no_fives in range(0, min(self.current_roll[4]+1,3)):
                 if no_ones == no_fives == 0:
                     continue
-                possible_options.append((no_ones, 0, 0, 0, no_fives, 0))
-        # triple numbers, one and five already accounted
-        for triple_num in [1, 2, 3, 5]:
+                ones_and_fives.append((no_ones, no_fives))
+        triple_num = []
+        for triple_num in [0, 1, 2, 3, 4, 5]:
             for no_tiple_num in range(3, self.current_roll[triple_num]+1):
-                possible_options.append(tuple(
+                triple_num.append(tuple(
                     no_tiple_num if index == triple_num else 0 for index in range(6)))
+        # combine triple with ones and fives
+        
         # triple doubles, only 3 at a time
         if FarkleRoll.triple_double(self.current_roll):
             for dice_indexes in combinations([index for index in range(6) if self.current_roll[index] == 2]):

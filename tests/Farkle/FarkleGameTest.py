@@ -22,3 +22,33 @@ class RollTest(unittest.TestCase):
         self.instance.current_roll = roll
         self._state = GameState.DICE_ROLL
         self.instance.get_options()
+
+    def scoreRollOne(self):
+        roll = (1, 0, 0, 0, 0, 0)
+        result = FarkleGame.score_roll(roll)
+        self.assertEqual(result, 100)
+
+    def scoreRollOnes(self):
+        roll = (2, 0, 0, 0, 0, 0)
+        result = FarkleGame.score_roll(roll)
+        self.assertEqual(result, 200)
+
+    def scoreRollTripleOne(self):
+        roll = (3, 0, 0, 0, 0, 0)
+        result = FarkleGame.score_roll(roll)
+        self.assertEqual(result, 1000)
+
+    def scoreRollMaxRoll(self):
+        roll = (6, 0, 0, 0, 0, 0)
+        result = FarkleGame.score_roll(roll)
+        self.assertEqual(result, 4000)
+
+    def scoreRollFive(self):
+        roll = (0, 0, 0, 0, 1, 0)
+        result = FarkleRoll.score_roll(roll)
+        self.assertEqual(result, 50)
+
+    def scoreRollOneFive(self):
+        roll = (1, 0, 0, 0, 1, 0)
+        result = FarkleGame.score_roll(roll)
+        self.assertEqual(result, 150)

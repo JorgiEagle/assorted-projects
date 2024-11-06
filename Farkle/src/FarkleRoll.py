@@ -41,4 +41,5 @@ class FarkleRoll:
         return not any(func(roll_tuple) for func in [FarkleRoll.triple_double, FarkleRoll.triple_or_better,
                                                      FarkleRoll.one_or_five])
 
+
 FarkleRoll.generate_rolls()

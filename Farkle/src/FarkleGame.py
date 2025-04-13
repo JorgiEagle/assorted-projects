@@ -110,12 +110,12 @@ class FarkleGame:
         if FarkleRoll.triple_double(roll):
             return 750
         if FarkleRoll.triple_or_better(roll):
-            for index, count in enumerate(roll):
+            for index, count in enumerate(roll, start=1):
                 if count >= 3:
-                    if index == 0:
+                    if index == 1:
                         total += 1000 * (count-2)
                     else:
-                        total += (index + 1) * 100 * (count-2)
+                        total += index * 100 * (count-2)
         # ones
         if roll[0] < 3:
             total += 100 * roll[0]

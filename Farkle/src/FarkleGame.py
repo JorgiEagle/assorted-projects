@@ -15,14 +15,6 @@ class InvalidStateError(RuntimeError):
             e.write(f"Error: {self.args[0]}, State: {self.state}")
 
 
-class GameState(Enum):
-    ROUND_START = 1
-    DICE_ROLL = 2
-    PICK_OPTION = 3
-    CASH_OUT = 4
-    GAME_OVER = 5
-
-
 class CashOutChoice(Enum):
     CASH_OUT = 1
     CONTINUE_ROUND = 2
@@ -43,23 +35,11 @@ class FarkleGame:
         # TODO create new farkle roll class with __str__ implementation
         self.current_roll: DiceRoll = None
         self.possible_options: list = None
-        self._state = GameState.ROUND_START
 
-    def check_state(self, desired_state: GameState):
-        if self._state != desired_state:
-            raise InvalidStateError(self._state)
-
-    def set_state(self, new_state: GameState) -> None:
-        if self._state == new_state:
-            raise InvalidStateError(self._state, "Already in current State")
-        self._state = new_state
 
     def roll_dice(self):
-        self.check_state(GameState.ROUND_START)
-        self.set_state(GameState.DICE_ROLL)
         self.current_roll = choice(FarkleRoll.all_rolls()[self.dice])
         if not FarkleGame.check_farkle(self.current_roll):
-            self.set_state(GameState.CASH_OUT)
             self.round_score = 0
             self.cash_out(CashOutChoice.CASH_OUT)
         else:
@@ -71,8 +51,6 @@ class FarkleGame:
         return FarkleRoll.check_roll(roll)
 
     def get_options(self) -> None:
-        self.check_state(GameState.DICE_ROLL)
-        self.set_state(GameState.PICK_OPTION)
         possible_options = []
         # single one or five options:
         for no_ones in range(0, min(self.current_roll[0]+1, 3)):
@@ -99,20 +77,19 @@ class FarkleGame:
         self.possible_options = possible_options
 
     def submit_choice(self, choice_index):
-        self.check_state(GameState.PICK_OPTION)
-
         self.round_score += FarkleGame.score_roll(self.possible_options[choice_index])
         self.dice -= sum(self.possible_options[choice_index])
 
         self.possible_options = None
         self.current_roll = None
         if self.round_score >= 300:
-            self.set_state(GameState.CASH_OUT)
+            # option to cash out
+            pass
         else:
-            self.set_state(GameState.ROUND_START)
+            # continue
+            pass
 
     def cash_out(self, choice):
-        self.check_state(GameState.CASH_OUT)
         match choice:
             case CashOutChoice.CASH_OUT.value | CashOutChoice.CASH_OUT:
                 self.total_score += self.round_score
@@ -124,7 +101,6 @@ class FarkleGame:
                     self.dice = 6
             case _:
                 raise InvalidStateError(choice)
-        self.set_state(GameState.ROUND_START)
 
     @staticmethod
     def score_roll(roll: tuple[int]) -> int:

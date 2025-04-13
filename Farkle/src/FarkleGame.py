@@ -2,9 +2,8 @@ from itertools import combinations
 from random import choice
 from abc import abstractmethod
 from enum import Enum
-
-from FarkleRoll import FarkleRoll
-
+import FarkleRoll
+from DiceRoll import DiceRoll
 
 class InvalidStateError(RuntimeError):
     def __init__(self, state, *args: object) -> None:
@@ -42,7 +41,7 @@ class FarkleGame:
 
         self.round_score = 0
         # TODO create new farkle roll class with __str__ implementation
-        self.current_roll: tuple = None
+        self.current_roll: DiceRoll = None
         self.possible_options: list = None
         self._state = GameState.ROUND_START
 
@@ -58,7 +57,7 @@ class FarkleGame:
     def roll_dice(self):
         self.check_state(GameState.ROUND_START)
         self.set_state(GameState.DICE_ROLL)
-        self.current_roll = choice(FarkleRoll.all_rolls[self.dice])
+        self.current_roll = choice(FarkleRoll.all_rolls()[self.dice])
         if not FarkleGame.check_farkle(self.current_roll):
             self.set_state(GameState.CASH_OUT)
             self.round_score = 0
@@ -67,27 +66,27 @@ class FarkleGame:
             self.get_options()
 
     @staticmethod
-    def check_farkle(roll) -> bool:
+    def check_farkle(roll: DiceRoll) -> bool:
         """Returns true if play can continue, returns false if a farkle"""
-        return roll in FarkleRoll.winning_rolls[sum(roll)]
+        return FarkleRoll.check_roll(roll)
 
     def get_options(self) -> None:
         self.check_state(GameState.DICE_ROLL)
         self.set_state(GameState.PICK_OPTION)
         possible_options = []
         # single one or five options:
-        ones_and_fives = []
         for no_ones in range(0, min(self.current_roll[0]+1, 3)):
-            for no_fives in range(0, min(self.current_roll[4]+1,3)):
+            for no_fives in range(0, min(self.current_roll[4]+1, 3)):
                 if no_ones == no_fives == 0:
                     continue
-                ones_and_fives.append((no_ones, no_fives))
-        triple_num = []
+                possible_options.append((no_ones, 0, 0, 0, no_fives, 0))
+
+        triple_num: int
         for triple_num in [0, 1, 2, 3, 4, 5]:
             for no_tiple_num in range(3, self.current_roll[triple_num]+1):
-                triple_num.append(tuple(
+                possible_options.append(tuple(
                     no_tiple_num if index == triple_num else 0 for index in range(6)))
-        # combine triple with ones and fives
+                
         
         # triple doubles, only 3 at a time
         if FarkleRoll.triple_double(self.current_roll):

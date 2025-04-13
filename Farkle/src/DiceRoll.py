@@ -1,15 +1,16 @@
 from collections import Counter
+from dataclasses import dataclass
 
 
+
+@dataclass(frozen=True)
 class DiceRoll:
-    def __init__(self, ones: int = 0, twos: int = 0, threes: int = 0, fours: int = 0, fives: int = 0, sixes: int = 0):
-        self.one = ones
-        self.two = twos
-        self.three = threes
-        self.four = fours
-        self.five = fives
-        self.six = sixes
-        self.set_roll()
+    one: int = 0
+    two: int = 0
+    three: int = 0
+    four: int = 0
+    five: int = 0
+    six: int = 0
 
     @classmethod
     def fromFaceValues(cls, face_values: list[int]):
@@ -17,12 +18,30 @@ class DiceRoll:
         count_values = Counter(face_values)
         return cls(*[count_values.get(index, 0) for index in range(1, 7)])
 
-    def set_roll(self):
-        self.roll = (self.one, self.two, self.three, self.four, self.five, self.six)
+    def get_roll(self) -> tuple[int]:
+        return (self.one, self.two, self.three, self.four, self.five, self.six)
 
-    def get_roll(self):
-        return self.roll
+    def get_num_dice(self) -> int:
+        return sum(self.get_roll())
+
+    def counts(self) -> tuple[int]:
+        return set(self.get_roll())
+
+    def __str__(self) -> str:
+        return str(self.get_roll())
+
+    def __repr__(self) -> str:
+        return f"DiceRoll{self.__str__()}"
+    
+    def __lt__(self, value: 'DiceRoll'):
+        return self.get_roll() < value.get_roll()
+    
+    def __eq__(self, value: 'DiceRoll'):
+        self.get_roll() == value.get_roll()
 
 
 if __name__ == "__main__":
-    pass
+    new = DiceRoll(3, 2)
+    print(new)
+    print(new.one)
+    print(new)

@@ -28,16 +28,29 @@ class DiceRoll:
         return set(self.get_roll())
 
     def __str__(self) -> str:
-        return str(self.get_roll())
+        out = ''
+        for index, die in enumerate(self.get_roll()):
+            out += f'{index+1}s: {die}\t'
+        return out
 
     def __repr__(self) -> str:
-        return f"DiceRoll{self.__str__()}"
+        return f"DiceRoll{str(self.get_roll())}"
     
     def __lt__(self, value: 'DiceRoll'):
         return self.get_roll() < value.get_roll()
     
     def __eq__(self, value: 'DiceRoll'):
-        self.get_roll() == value.get_roll()
+        return self.get_roll() == value.get_roll()
+
+    def __add__(self, other: 'DiceRoll') -> 'DiceRoll':
+        return DiceRoll(
+            self.one + other.one,
+            self.two + other.two,
+            self.three + other.three,
+            self.four + other.four,
+            self.five + other.five,
+            self.six + other.six
+        )
 
 
 if __name__ == "__main__":

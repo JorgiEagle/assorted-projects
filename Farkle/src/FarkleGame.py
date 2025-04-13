@@ -19,13 +19,12 @@ class CashOutChoice(Enum):
     CASH_OUT = 1
     CONTINUE_ROUND = 2
 
+    @staticmethod
+    def map_value_to_enum(value):
+        return {1: CashOutChoice.CASH_OUT, 2: CashOutChoice.CONTINUE_ROUND}[value]
+
 
 class FarkleGame:
-    @property
-    @abstractmethod
-    def max_rolls():
-        pass
-
     def __init__(self) -> None:
         self.dice = 6
         self.total_score = 0
@@ -34,102 +33,47 @@ class FarkleGame:
         self.round_score = 0
         # TODO create new farkle roll class with __str__ implementation
         self.current_roll: DiceRoll = None
-        self.possible_options: list = None
+        self.possible_options: list[DiceRoll] = None
 
 
-    def roll_dice(self):
+    def roll_dice(self) -> list[DiceRoll] | None:
         self.current_roll = choice(FarkleRoll.all_rolls()[self.dice])
         if not FarkleGame.check_farkle(self.current_roll):
             self.round_score = 0
             self.cash_out(CashOutChoice.CASH_OUT)
+            return None
         else:
-            self.get_options()
+            self.possible_options = self._get_options()
+            return self.possible_options
 
     @staticmethod
     def check_farkle(roll: DiceRoll) -> bool:
         """Returns true if play can continue, returns false if a farkle"""
         return FarkleRoll.check_roll(roll)
 
-    def get_options(self) -> None:
-        possible_options = []
-        # single one or five options:
-        for no_ones in range(0, min(self.current_roll[0]+1, 3)):
-            for no_fives in range(0, min(self.current_roll[4]+1, 3)):
-                if no_ones == no_fives == 0:
-                    continue
-                possible_options.append((no_ones, 0, 0, 0, no_fives, 0))
-
-        triple_num: int
-        for triple_num in [0, 1, 2, 3, 4, 5]:
-            for no_tiple_num in range(3, self.current_roll[triple_num]+1):
-                possible_options.append(tuple(
-                    no_tiple_num if index == triple_num else 0 for index in range(6)))
-                
-        
-        # triple doubles, only 3 at a time
-        if FarkleRoll.triple_double(self.current_roll):
-            for dice_indexes in combinations([index for index in range(6) if self.current_roll[index] == 2]):
-                possible_options.append(tuple(
-                    self.current_roll[index] if index in dice_indexes else 0 for index in range(6)))
-        # straight
-        if FarkleRoll.straight(self.current_roll):
-            possible_options.append((1 for _ in range(6)))
-        self.possible_options = possible_options
+    def _get_options(self) -> list[DiceRoll]:
+        return list(FarkleRoll.valid_choices(self.current_roll))
 
     def submit_choice(self, choice_index):
-        self.round_score += FarkleGame.score_roll(self.possible_options[choice_index])
-        self.dice -= sum(self.possible_options[choice_index])
+        self.round_score += FarkleRoll.score_roll(self.possible_options[choice_index])
+        self.dice -= sum(self.possible_options[choice_index].get_roll())
 
         self.possible_options = None
         self.current_roll = None
-        if self.round_score >= 300:
-            # option to cash out
-            pass
-        else:
-            # continue
-            pass
+        return self.round_score
 
-    def cash_out(self, choice):
+    def cash_out(self, choice: CashOutChoice):
         match choice:
-            case CashOutChoice.CASH_OUT.value | CashOutChoice.CASH_OUT:
+            case CashOutChoice.CASH_OUT:
                 self.total_score += self.round_score
                 self.round_score = 0
                 self.dice = 6
                 self.rounds += 1
-            case CashOutChoice.CONTINUE_ROUND.value | CashOutChoice.CONTINUE_ROUND:
+            case CashOutChoice.CONTINUE_ROUND:
                 if self.dice == 0:
                     self.dice = 6
             case _:
                 raise InvalidStateError(choice)
-
-    @staticmethod
-    def score_roll(roll: tuple[int]) -> int:
-        total = 0
-        if FarkleRoll.straight(roll):
-            return 1500
-        if FarkleRoll.triple_double(roll):
-            return 750
-        if FarkleRoll.triple_or_better(roll):
-            for index, count in enumerate(roll, start=1):
-                if count >= 3:
-                    if index == 1:
-                        total += 1000 * (count-2)
-                    else:
-                        total += index * 100 * (count-2)
-        # ones
-        if roll[0] < 3:
-            total += 100 * roll[0]
-        # fives
-        if roll[4] < 3:
-            total += 50 * roll[4]
-        return total
-
-    @staticmethod
-    def roll_to_str(roll) -> str:
-        out = ''
-        for index, die in enumerate(roll):
-            out += f'\t{index+1}s: {die}\n'
-        return out
 
     def round_stats(self):
         return f"Round score: {self.round_score}\tCurrent Dice {self.dice}"
